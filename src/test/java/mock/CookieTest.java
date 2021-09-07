@@ -11,8 +11,8 @@ public class CookieTest {
 
     @Test
     public void testParallel() {
-        Results results = Runner.path("classpath:mock/async/main.feature")
-                .configDir("classpath:mock/async")
+        Results results = Runner.path("classpath:mock/main.feature")
+                .configDir("classpath:mock")
                 .parallel(1);
         assertTrue(results.getErrorMessages(), results.getFailCount() == 0);
     }
